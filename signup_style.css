@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text&family=Lato:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.outer-box{
+    overflow: auto;
+    height: 100vh;
+    width: 100vw;
+    /* background-repeat: no-repeat; */
+    background-image: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url("images/lehanga/b10.jpg");
+}
+
+.inner-box{
+    width: 400px;
+    margin: 0 auto;
+    background: linear-gradient(to top left, #ffffffff, #ffffff33);
+    backdrop-filter: blur(8px);
+    padding: 20px 30px;
+    border-radius: 8px;
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+    box-shadow: 2px 2px 5px #112f42;
+    z-index: 2;
+    
+}
+
+.signup-header h1{
+    font-size: 2.8rem;
+    color: #212121;
+}
+
+.signup-header p{
+    color: #4e4343;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.signup-body{
+    margin: 20px 0;
+}
+
+.signup-body p{
+    margin: 10px 0;
+    font-weight: bold;
+}
+.signup-body p label{
+    display: block;
+    font-size: 1.2rem;
+
+
+}
+
+.signup-body input{
+    font-size: 1rem;
+    width: 100%;
+    height: 30px;
+    padding: 20px;
+    margin-top: 5px;
+    border: 1px solid #bdb7b7;
+    border-radius: 4px;
+}
+
+.signup-body input[type="submit"]{
+    background-color: #791a1a;
+    font-size: 1rem;
+    padding: 2px;
+    color: white;
+    border: none;
+}
+
+.signup-body input[type="submit"]:hover{
+    background-color: #500b1e;
+    cursor: pointer;
+}
+
+.signup-footer p{
+    color: rgba(14, 14, 14, 0.61);
+    margin: 10px;
+    text-align: center;
+    
+}
+.signup-footer p a{
+    color: #440606;
+}
+
+/* .circle {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, #ffffffaa, #ffffffff);
+    border-radius: 100px;
+    position: absolute;
+} */
+
+.c1{
+    top: 100px;
+    left: 100px;
+}
+
+.c2{
+    bottom: 100px;
+    right: 100px;
+}

@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap');
+
+/* resets */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-dark-color: #1d69a3;
+    --padding-inline-section: 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+h6 {
+    font-family: "DM Sans", Helvetica, Arial, sans-serif;
+    ;
+}
+
+ul {
+    list-style: none;
+}
+
+/* utility classes */
+
+.small-text {
+    font-size: 1rem;
+    /* font-weight: 100; */
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.hover-link {
+    color: grey;
+}
+
+.hover-link:hover {
+    text-decoration: underline 3px;
+    color: black;
+    text-underline-offset: 20px;
+    transition: 0.3s ease-out;
+    text-underline-position: under;
+}
+
+.primary-button {
+    background-color: black;
+    border-radius: 6px;
+    font-weight: 500;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--primary-text-color);
+    transition: 0.2s ease-out;
+}
+
+.primary-button:hover {
+    background-color: grey;
+}
+
+/* top banner */
+.banner-header {
+    background-color: transparent;
+}
+
+.banner-text {
+    color: white;
+    padding: 20px;
+    margin-left: 20px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.space {
+    padding: 10px;
+}
+
+
+/* Main Nav */
+nav {
+    max-width: 1180px;
+    margin-inline: auto;
+    background-color: #f5f5f5;
+    position: sticky;
+    top: 20px;
+    margin-inline: 90px;
+    z-index: 1;
+
+}
+
+.company-logo img {
+    height: 70px;
+    box-shadow: #cccccc;
+}
+
+.nav-links,
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+a:is(:link,:active, :visited).active{
+     text-decoration: underline 3px;
+    color: black;
+    text-underline-offset: 20px;
+    transition: 0.3s ease-out;
+    text-underline-position: under;
+}
+
+
+.hero-image {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url("images/lehanga/I1.jpg");
+    background-color: #cccccc;
+    top: 0px;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* h2{
+    font-family: "DM Sans", Helvetica, Arial, sans-serif;;
+    font-weight: 100;
+    margin-left: 200px;
+    margin-top: 100px;
+    color: white;
+    transition-delay: width 10s;
+} */
+.header-left #icon1 {
+    position: absolute;
+    left: 130px;
+    top: 250px;
+    color: white;
+}
+
+.header-left #icon2 {
+    position: absolute;
+    left: 130px;
+    top: 280px;
+    color: white;
+}
+
+.header-left h2 {
+    font-family: "DM Sans", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    margin-left: 200px;
+    margin-top: 100px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 35px;
+    animation-name: moveInleft;
+    animation-duration: 3s;
+}
+
+.header-left h4 {
+    font-family: "DM Sans", Helvetica, Arial, sans-serif;
+    ;
+    font-weight: 100;
+    margin-left: 200px;
+    margin-top: 10px;
+    color: rgb(174, 170, 170);
+    text-transform: uppercase;
+    letter-spacing: 52x;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+}
+
+@keyframes moveInleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+
+
+/* features */
+.features {
+    height: 700px;
+    background-color: #eaf1f5;
+}
+
+.feature-text {
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.feature-text h3 {
+    margin: 50px 0 0 10px;
+    font-weight: 10;
+}
+
+.feature-text h2 {
+    font-weight: 10;
+    margin: 0 0 0 40px;
+    font-size: 80px;
+}
+
+/* ------------ */
+.example-card {
+    width: 23%;
+    position: relative;
+    min-height: 300px;
+    background-color: black;
+    transition: 0.2s ease-out;
+}
+
+.example-card:nth-child(1) {
+    background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(images/lehanga/l2.jpg);
+    background-size: cover;
+}
+
+.example-card:nth-child(2) {
+    background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(images/lehanga/h2.jpg);
+    background-size: cover;
+}
+
+.example-card:nth-child(3) {
+    background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(images/lehanga/b1.jpg);
+    background-size: cover;
+}
+
+.example-card:nth-child(4) {
+    background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(images/lehanga/l3.jpg);
+    background-size: cover;
+}
+
+.example-card:hover {
+    box-shadow: 0 0 8px #888;
+    transform: scale(1.1);
+    box-shadow: -3px 10px 8px 1px #595757;
+
+}
+
+
+.example-card h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.example-card h5 {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.example-area {
+    justify-content: space-between;
+    margin-block: 30px;
+}
+
+.sales {
+    text-decoration: line-through;
+    font-size: 12px;
+}
+
+.feature-btn a {
+    position: relative;
+    margin-left: 40%;
+    margin-top: 50px;
+}
+
+/* Our Story */
+.who-we-are-container {
+    flex-direction: column;
+    background-image: url("images/home_section3_bg.jpg");
+    background-color: #cccccc;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+.who-we-are-header {
+    margin-top: 50px;
+}
+
+.who-we-are-header h2 {
+    font-weight: 10;
+    font-size: 80px;
+
+}
+
+.bg {
+    margin: 20px 80px 0;
+}
+
+.our-stry-left-img img {
+    width: 350px;
+    height: 410px;
+    box-shadow: -8px 10px 8px 1px #595757;
+}
+
+.our-stry-desc {
+    background-color: white;
+    flex-direction: column;
+    width: 600px;
+    padding: 30px;
+    text-align: center;
+}
+
+.our-stry-desc h2,
+h5,
+h6 {
+    font-weight: 10;
+    margin-bottom: 15px;
+}
+
+.learn-more-btn a {
+    position: relative;
+    margin-top: 50px;
+}
+
+/* Big features section */
+.feature-area {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.features-card {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 20%;
+    text-align: center;
+    padding: 100px 0 50px;
+    flex-wrap: wrap;
+}
+
+.features-card h3 {
+    font-weight: 10;
+}
+
+
+/* Cta section */
+
+.get-off {
+    height: 300px;
+    padding: 15px;
+    text-align: center;
+    padding-top: 70px;
+    line-height: 200%;
+    background-color: #efe7d4;
+}
+
+.get-off h3,
+p {
+    margin-bottom: 10px;
+}
+
+.cta-area {
+    margin: 0 auto;
+    margin-bottom: 80px;
+    max-width: 1100px;
+
+}
+
+.cta-card {
+    width: 23%;
+    position: relative;
+    min-height: 300px;
+    background-color: black;
+    transition: 0.2s ease-out;
+}
+
+.cta-card:nth-child(1) {
+    background: url(images/lehanga/b2.jpg);
+    background-size: cover;
+}
+
+.cta-card:nth-child(2) {
+    background: url(images/lehanga/b4.jpg);
+    background-size: cover;
+}
+
+.cta-card:nth-child(4) {
+    background: url(images/lehanga/b6.jpg);
+    background-size: cover;
+}
+
+/* footer */
+footer {
+    padding-block: 80px;
+    background-color: #ebf2fa;
+}
+
+.footer-container {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.link-column {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+
+}
+
+footer .company-logo img{
+    width: 190px;
+    height: 180px;
+}
+
+/* sub footer section */
+.sub-footer {
+    background-color: #b9cde4;
+    padding: var(--padding-inline-section);
+}
+
+.sub-footer-container {
+    justify-content: center;
+    gap: 30px;
+}
+
+.hover-link2 {
+    color: grey;
+}
+
+.hover-link2:hover {
+    color: black;
+}
+
+.scroll {
+    height: 2720px;
+}
